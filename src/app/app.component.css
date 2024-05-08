@@ -17,6 +17,7 @@ main {
 .flex-options {
     flex-basis: 49%;
     flex-grow: 1;
+    flex-wrap: wrap;
 }
 
 .resume-table {

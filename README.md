@@ -13,6 +13,6 @@ Make sure you have nodejs version 20.11.1 or above installed on your local machi
 Run `npm install or npm i` to install all the depencies for the project.
 
 ## Run the application
-Once installed you can start the project locally with `npm start`.
+Once installed you can start the project locally with `npm start or ng serve`.
 
 Navigate to `http://localhost:4200/`
