@@ -1,0 +1,45 @@
+<mat-card class="details mat-elevation-z8">
+    <mat-card-header class="header-card">
+      <mat-card-title>{{pokemonDetails.name}}</mat-card-title>
+      <mat-card-subtitle class="subtitle-header-card">Información</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>
+          <span matListItemTitle>Altura</span>
+          <span matListItemLine>{{pokemonDetails.height}}</span>
+        </mat-list-item>
+        <mat-divider/>
+        <mat-list-item>
+          <span matListItemTitle>Peso</span>
+          <span matListItemLine>{{pokemonDetails.weight}}</span>
+        </mat-list-item>
+        <mat-divider/>
+        <mat-list-item>
+          <span matListItemTitle>Experiencia Base</span>
+          <span matListItemLine>{{pokemonDetails.base_experience}}</span>
+        </mat-list-item>
+        <mat-divider/>
+        <mat-list-item>
+          <span matListItemTitle>Altura</span>
+          <span matListItemLine>{{pokemonDetails.height}}</span>
+        </mat-list-item>
+        <mat-divider/>
+        <mat-list-item>
+          <span matListItemTitle>Habilidades</span>
+          @for (ability of pokemonDetails.abilities; track $index) {
+            <span matListItemLine>{{ability.ability.name}}</span>
+          }
+          </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+    @if (!fromDialog) {
+      <mat-card-actions>
+        <button mat-raised-button class="fav-btn" (click)="handleOnClick($event)">Agregar a Favoritos</button>
+      </mat-card-actions>
+
+    }
+  </mat-card>
+  
+
+  

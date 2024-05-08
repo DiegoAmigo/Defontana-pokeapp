@@ -1,0 +1,25 @@
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    padding: 1rem;
+}
+.flex {
+    display: flex;
+    flex-grow: 1;
+    gap: 10px;
+}
+.side {
+    align-content: center;
+}
+
+.flex-options {
+    flex-basis: 49%;
+    flex-grow: 1;
+}
+
+.resume-table {
+    display: flex;
+    flex-grow: 1;
+}

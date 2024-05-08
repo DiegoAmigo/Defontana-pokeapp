@@ -1,0 +1,23 @@
+.details {
+    flex-grow: 1;
+}
+
+.header-card {
+    justify-content: center;
+    text-align: center;
+    background-color: #ef5350;
+    color: white;
+}
+.subtitle-header-card {
+    color: white;
+}
+
+.mat-mdc-raised-button:not(:disabled) {
+    color: white;
+    background-color: #ef5350;
+}
+
+.fav-btn {
+    background-color: #ef5350;
+    color: #ef5350;
+}

@@ -1,0 +1,16 @@
+.bar {
+    flex-grow: 1;
+}
+
+.bar2 {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: #ff9290;
+    color: white;
+}
+
+.mat-mdc-raised-button:not(:disabled) {
+    color: white;
+    background-color: #ef5350;
+}

@@ -1,0 +1,13 @@
+<nav class="bar">
+    <mat-toolbar class="bar2">
+        <span>Pokemon Favorito: </span>
+        @if(favPokemon !== undefined) {
+            <button
+                mat-raised-button
+                (click)="openDialog(favPokemon)"
+            >
+            {{favPokemon.name}}
+            </button>
+        }
+    </mat-toolbar>
+</nav>

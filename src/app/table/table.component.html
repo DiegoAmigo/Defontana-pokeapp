@@ -1,0 +1,53 @@
+<div class="mat-elevation-z8">
+    @if (isLoadingResults) {
+    <div class="example-loading-shade">
+        @if (isLoadingResults) {
+        <mat-spinner/>
+        }
+    </div>
+    }
+    <mat-form-field color="warn">
+        <mat-label>Filtrar por nombre (pulsar enter para filtrar)</mat-label>
+        <input
+            matInput
+            (keyup)="applyFilter($event)"
+            placeholder="Ex. bulbasaur" 
+            #input
+        >
+    </mat-form-field>
+    <div class="scrollable">
+        <table mat-table [dataSource]="dataSourcePokemons">
+            <ng-container matColumnDef="name">
+                <th mat-header-cell class="center-text" *matHeaderCellDef>
+                    Nombre
+                </th>
+                <td mat-cell class="center-text" *matCellDef="let row">
+                    {{row.name}}
+                </td>
+            </ng-container>
+
+            <tr mat-header-row class="header-table" *matHeaderRowDef="displayedColumns sticky: true"></tr>
+            <tr
+                mat-row 
+                class="row-is-hovered center-text" 
+                (click)="openDetails(row)" 
+                *matRowDef="let row; columns: displayedColumns;"
+            ></tr>
+
+            <tr class="mat-row" *matNoDataRow>
+                <td class="mat-cell" colspan="4">Ningún dato calza con el filtro "{{input.value}}"</td>
+            </tr>
+        </table>
+    </div>
+
+    <mat-paginator
+        showFirstLastButtons
+        [length]="resultsLength" 
+        [pageSize]="pageSize"
+        [pageIndex]="pageIndex"
+        [pageSizeOptions]="pageSizeOptions"
+        (page)="handlePageEvent($event)"
+        aria-label="Select page of pokeApi search results"
+    >
+    </mat-paginator>
+</div>

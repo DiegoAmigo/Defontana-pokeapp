@@ -1,0 +1,33 @@
+<div class="resume-table mat-elevation-z8">
+    @if (isLoading) {
+        <mat-progress-spinner/>
+    }
+    <div>
+        <table mat-table [dataSource]="lettersData">
+            <ng-container matColumnDef="letter">
+              <th mat-header-cell class="center-text" *matHeaderCellDef>Letra Inicial</th>
+              <td mat-cell class="center-text" *matCellDef="let row">{{ row.letter }}</td>
+            </ng-container>
+          
+            <ng-container matColumnDef="quantity">
+              <th mat-header-cell class="center-text" *matHeaderCellDef>Cantidad de Pokemones</th>
+              <td mat-cell class="center-text" *matCellDef="let row">{{ row.quantity }}</td>
+            </ng-container>
+          
+            <tr
+              mat-header-row 
+              class="header-table" 
+              *matHeaderRowDef="displayedColumns; sticky: true"
+            ></tr>
+            <tr
+              mat-row 
+              class="row-is-hovered" 
+              *matRowDef="let row; columns: displayedColumns;"
+            ></tr>
+          </table>
+
+    </div>
+</div>
+
+
+

@@ -1,0 +1,23 @@
+.resume-table {
+    flex-grow: 1;
+    flex-basis: 100%;
+    overflow: auto; 
+    max-height: 500px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.header-table {
+    background-color: #ef5350; 
+    color: white;
+}
+
+.row-is-hovered:hover {
+    background: #ef5350b2;
+    transition: ease-in-out 200ms;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+}
